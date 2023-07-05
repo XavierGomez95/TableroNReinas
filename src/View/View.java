@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class View {
 
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     public int askNumber () {
         int answer;
@@ -14,11 +14,10 @@ public class View {
             try {
                 answer = scanner.nextInt();
                 return answer;
-            } catch (InputMismatchException e) { //QUALSEVOL COSA QUE NO SIGUI UN NOMBRE ENTRAREM DINS EL CATCH
-                e.printStackTrace(); //mostra un error en vermell i va bé per debuggar.
+            } catch (InputMismatchException e) {
                 System.out.print("ERROR: Please enter a digit: ");
             } finally {
-                scanner.nextLine(); //ens carreguem el \n
+                scanner.nextLine(); //buffer \n
             }
         }
     }
@@ -31,9 +30,26 @@ public class View {
                 System.out.print("|" + config[i] + "|");
             }
         }
+
+        System.out.println();
+        System.out.println();
+        for (int rowIndex : config) {
+            for (int columnIndex = 0; columnIndex < config.length; columnIndex++) {
+                if (columnIndex == config[rowIndex]) {
+                    System.out.print("|x");
+                } else {
+                    System.out.print("| ");
+                }
+            }
+            System.out.println("|");
+        }
     }
 
     public void showMessage(String message) {
         System.out.println(message);
+    }
+
+    public void showQuestion(String question) {
+        System.out.print(question);
     }
 }
