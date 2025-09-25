@@ -33,9 +33,9 @@ public class View {
 
         System.out.println();
         System.out.println();
-        for (int rowIndex : config) {
+        for (int row = 0; row < config.length; row++) {
             for (int columnIndex = 0; columnIndex < config.length; columnIndex++) {
-                if (columnIndex == config[rowIndex]) {
+                if (columnIndex == config[row]) {
                     System.out.print("|x");
                 } else {
                     System.out.print("| ");
