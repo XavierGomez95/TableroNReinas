@@ -36,7 +36,7 @@ public class View {
         for (int row = 0; row < config.length; row++) {
             for (int columnIndex = 0; columnIndex < config.length; columnIndex++) {
                 if (columnIndex == config[row]) {
-                    System.out.print("|x");
+                    System.out.print("|Q");
                 } else {
                     System.out.print("| ");
                 }
