@@ -1,4 +1,4 @@
-# Tablero N-Reinas (Java)
+# N-Queens Boardgame Solver (Java)
 
 This project, written in **Java**, displays all possible solutions to the classic **N-Queens problem**, solved using **recursive backtracking**.
 
